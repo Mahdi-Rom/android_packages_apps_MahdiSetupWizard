@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard;
+package org.mahdi.setupwizard;
 
 import android.app.Application;
 import android.app.StatusBarManager;
 import android.content.Context;
 
-public class NamelessSetupWizard extends Application {
+public class MahdiSetupWizard extends Application {
 
-    public static final String TAG = "NamelessSetupWizard";
+    public static final String TAG = "MahdisSetupWizard";
 
     public static final boolean DEBUG = false;
 
@@ -32,8 +32,8 @@ public class NamelessSetupWizard extends Application {
     public static final String EXTRA_FIRST_RUN = "firstRun";
     public static final String EXTRA_ALLOW_SKIP = "allowSkip";
 
-    public static final String GCM_PREFERENCES = "org.namelessrom.setupwizard.gcm";
-    public static final String SETTINGS_PREFERENCES = "org.namelessrom.setupwizard_preferences";
+    public static final String GCM_PREFERENCES = "org.mahdi.setupwizard.gcm";
+    public static final String SETTINGS_PREFERENCES = "org.mahdi.setupwizard_preferences";
 
     private StatusBarManager mStatusBarManager;
 

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.widget;
+package org.mahdi.setupwizard.widget;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.setup;
+package org.mahdi.setupwizard.setup;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -23,9 +23,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import org.namelessrom.setupwizard.R;
-import org.namelessrom.setupwizard.ui.SetupPageFragment;
-import org.namelessrom.setupwizard.ui.SetupWizardActivity;
+import org.mahdi.setupwizard.R;
+import org.mahdi.setupwizard.ui.SetupPageFragment;
+import org.mahdi.setupwizard.ui.SetupWizardActivity;
 
 public class FinishPage extends Page {
 

@@ -15,14 +15,14 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.util;
+package org.mahdi.setupwizard.util;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 
-public class NamelessAccountUtils {
+public class MahdiAccountUtils {
     public static boolean isNetworkConnected(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);

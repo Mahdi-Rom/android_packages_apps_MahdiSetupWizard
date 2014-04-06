@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.ui;
+package org.mahdi.setupwizard.ui;
 
 import android.annotation.Widget;
 import android.content.Context;
@@ -570,8 +570,8 @@ public class LocalePicker extends LinearLayout {
      */
     public LocalePicker(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        SELECTOR_WHEEL_ITEM_COUNT = context.getResources().getInteger(org.namelessrom.setupwizard.R.integer.local_picker_items);
-        SELECTOR_MIDDLE_ITEM_INDEX = context.getResources().getInteger(org.namelessrom.setupwizard.R.integer.local_picker_items) / 2;
+        SELECTOR_WHEEL_ITEM_COUNT = context.getResources().getInteger(org.mahdi.setupwizard.R.integer.local_picker_items);
+        SELECTOR_MIDDLE_ITEM_INDEX = context.getResources().getInteger(org.mahdi.setupwizard.R.integer.local_picker_items) / 2;
         mSelectorIndices = new int[SELECTOR_WHEEL_ITEM_COUNT];
         // process style attributes
         TypedArray attributesArray = context.obtainStyledAttributes(

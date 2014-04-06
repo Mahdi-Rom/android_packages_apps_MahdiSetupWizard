@@ -15,7 +15,7 @@
  * the License.
  */
 
-package org.namelessrom.setupwizard.util;
+package org.mahdi.setupwizard.util;
 
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.app.ActivityManager;

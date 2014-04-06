@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.ui;
+package org.mahdi.setupwizard.ui;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -25,8 +25,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.namelessrom.setupwizard.setup.Page;
-import org.namelessrom.setupwizard.setup.SetupDataCallbacks;
+import org.mahdi.setupwizard.setup.Page;
+import org.mahdi.setupwizard.setup.SetupDataCallbacks;
 
 public abstract class SetupPageFragment extends Fragment {
 

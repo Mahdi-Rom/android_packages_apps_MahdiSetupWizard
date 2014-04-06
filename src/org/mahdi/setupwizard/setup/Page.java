@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.setup;
+package org.mahdi.setupwizard.setup;
 
 import android.app.Fragment;
 import android.content.Context;

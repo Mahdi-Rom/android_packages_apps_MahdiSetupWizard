@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.ui;
+package org.mahdi.setupwizard.ui;
 
 import android.accounts.AccountManager;
 import android.accounts.AccountManagerCallback;
@@ -41,16 +41,16 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
-import org.namelessrom.setupwizard.NamelessSetupWizard;
-import org.namelessrom.setupwizard.R;
-import org.namelessrom.setupwizard.gcm.GCMUtil;
-import org.namelessrom.setupwizard.setup.AbstractSetupData;
-import org.namelessrom.setupwizard.setup.NamelessSetupWizardData;
-import org.namelessrom.setupwizard.setup.Page;
-import org.namelessrom.setupwizard.setup.PageList;
-import org.namelessrom.setupwizard.setup.SetupDataCallbacks;
-import org.namelessrom.setupwizard.util.EnableAccessibilityController;
-import org.namelessrom.setupwizard.util.NamelessAccountUtils;
+import org.mahdi.setupwizard.MahdiSetupWizard;
+import org.mahdi.setupwizard.R;
+import org.mahdi.setupwizard.gcm.GCMUtil;
+import org.mahdi.setupwizard.setup.AbstractSetupData;
+import org.mahdi.setupwizard.setup.MahdiSetupWizardData;
+import org.mahdi.setupwizard.setup.Page;
+import org.mahdi.setupwizard.setup.PageList;
+import org.mahdi.setupwizard.setup.SetupDataCallbacks;
+import org.mahdi.setupwizard.util.EnableAccessibilityController;
+import org.mahdi.setupwizard.util.MahdiAccountUtils;
 
 import java.util.List;
 
@@ -79,11 +79,11 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setup_main);
-        ((NamelessSetupWizard) AppGlobals.getInitialApplication()).disableStatusBar();
-        mSharedPreferences = getSharedPreferences(NamelessSetupWizard.SETTINGS_PREFERENCES, Context.MODE_PRIVATE);
+        ((MahdiSetupWizard) AppGlobals.getInitialApplication()).disableStatusBar();
+        mSharedPreferences = getSharedPreferences(MahdiSetupWizard.SETTINGS_PREFERENCES, Context.MODE_PRIVATE);
         mSetupData = (AbstractSetupData) getLastNonConfigurationInstance();
         if (mSetupData == null) {
-            mSetupData = new NamelessSetupWizardData(this);
+            mSetupData = new MahdiSetupWizardData(this);
         }
 
         if (savedInstanceState != null) {
@@ -133,8 +133,8 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
     protected void onResume() {
         super.onResume();
         onPageTreeChanged();
-        if (!NamelessAccountUtils.isNetworkConnected(this)) {
-            NamelessAccountUtils.tryEnablingWifi(this);
+        if (!MahdiAccountUtils.isNetworkConnected(this)) {
+            MahdiAccountUtils.tryEnablingWifi(this);
         }
     }
 
@@ -280,7 +280,7 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
     private void removeUnNeededPages() {
         boolean pagesRemoved = false;
         Page page = mPageList.findPage(R.string.setup_google_account);
-        if (page != null && (!GCMUtil.googleServicesExist(SetupWizardActivity.this) || accountExists(NamelessSetupWizard.ACCOUNT_TYPE_GOOGLE))) {
+        if (page != null && (!GCMUtil.googleServicesExist(SetupWizardActivity.this) || accountExists(MahdiSetupWizard.ACCOUNT_TYPE_GOOGLE))) {
             removeSetupPage(page, false);
             pagesRemoved = true;
         }
@@ -303,9 +303,9 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
 
     public void launchGoogleAccountSetup() {
         Bundle bundle = new Bundle();
-        bundle.putBoolean(NamelessSetupWizard.EXTRA_FIRST_RUN, true);
-        bundle.putBoolean(NamelessSetupWizard.EXTRA_ALLOW_SKIP, true);
-        AccountManager.get(this).addAccount(NamelessSetupWizard.ACCOUNT_TYPE_GOOGLE, null, null, bundle, this, new AccountManagerCallback<Bundle>() {
+        bundle.putBoolean(MahdiSetupWizard.EXTRA_FIRST_RUN, true);
+        bundle.putBoolean(MahdiSetupWizard.EXTRA_ALLOW_SKIP, true);
+        AccountManager.get(this).addAccount(MahdiSetupWizard.ACCOUNT_TYPE_GOOGLE, null, null, bundle, this, new AccountManagerCallback<Bundle>() {
             @Override
             public void run(AccountManagerFuture<Bundle> bundleAccountManagerFuture) {
                 if (isDestroyed()) return; //There is a change this activity has been torn down.
@@ -329,7 +329,7 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
         Settings.Global.putInt(getContentResolver(), Settings.Global.DEVICE_PROVISIONED, 1);
         Settings.Secure.putInt(getContentResolver(), Settings.Secure.USER_SETUP_COMPLETE, 1);
         UserManager.get(this).setUserName(UserHandle.myUserId(), getString(com.android.internal.R.string.owner_name));
-        ((NamelessSetupWizard) AppGlobals.getInitialApplication()).enableStatusBar();
+        ((MahdiSetupWizard) AppGlobals.getInitialApplication()).enableStatusBar();
         Intent intent = new Intent("android.intent.action.MAIN");
         intent.addCategory("android.intent.category.HOME");
         disableSetupWizards(intent);

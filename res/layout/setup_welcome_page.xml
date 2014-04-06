@@ -35,7 +35,7 @@
             style="@style/SetupWizardPageSummary"
             android:text="@string/setup_welcome_summary" />
 
-        <org.namelessrom.setupwizard.ui.LocalePicker
+        <org.mahdi.setupwizard.ui.LocalePicker
             android:id="@+id/locale_list"
             android:layout_width="match_parent"
             android:layout_height="0px"

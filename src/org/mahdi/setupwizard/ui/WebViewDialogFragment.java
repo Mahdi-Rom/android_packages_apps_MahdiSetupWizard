@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.ui;
+package org.mahdi.setupwizard.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -25,7 +25,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 
-import org.namelessrom.setupwizard.R;
+import org.mahdi.setupwizard.R;
 
 public class WebViewDialogFragment extends DialogFragment {
 

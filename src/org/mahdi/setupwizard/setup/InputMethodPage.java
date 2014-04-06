@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.setup;
+package org.mahdi.setupwizard.setup;
 
 import android.app.Fragment;
 import android.content.ContentResolver;
@@ -32,9 +32,9 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 
-import org.namelessrom.setupwizard.R;
-import org.namelessrom.setupwizard.ui.SetupPageFragment;
-import org.namelessrom.setupwizard.widget.InputMethodItem;
+import org.mahdi.setupwizard.R;
+import org.mahdi.setupwizard.ui.SetupPageFragment;
+import org.mahdi.setupwizard.widget.InputMethodItem;
 
 import java.util.ArrayList;
 import java.util.List;

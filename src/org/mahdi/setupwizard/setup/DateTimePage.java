@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.setup;
+package org.mahdi.setupwizard.setup;
 
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -41,8 +41,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import org.namelessrom.setupwizard.R;
-import org.namelessrom.setupwizard.ui.SetupPageFragment;
+import org.mahdi.setupwizard.R;
+import org.mahdi.setupwizard.ui.SetupPageFragment;
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.util.ArrayList;

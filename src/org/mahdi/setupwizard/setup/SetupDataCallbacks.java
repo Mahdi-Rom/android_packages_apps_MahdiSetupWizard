@@ -15,20 +15,14 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.gcm;
+package org.mahdi.setupwizard.setup;
 
-import android.content.Context;
+public interface SetupDataCallbacks {
+    void onPageLoaded(Page page);
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
+    void onPageTreeChanged();
 
-public class GCMUtil {
+    void onPageFinished(Page page);
 
-    public static boolean googleServicesExist(Context context) {
-        return GooglePlayServicesUtil.isGooglePlayServicesAvailable(context) != ConnectionResult.SERVICE_MISSING;
-    }
-
-    public static boolean playServicesUpdateRequired(Context context) {
-        return GooglePlayServicesUtil.isGooglePlayServicesAvailable(context) == ConnectionResult.SERVICE_VERSION_UPDATE_REQUIRED;
-    }
+    Page getPage(String key);
 }

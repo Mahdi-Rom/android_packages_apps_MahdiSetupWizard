@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.setup;
+package org.mahdi.setupwizard.setup;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -27,9 +27,9 @@ import android.widget.ArrayAdapter;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
-import org.namelessrom.setupwizard.R;
-import org.namelessrom.setupwizard.ui.LocalePicker;
-import org.namelessrom.setupwizard.ui.SetupPageFragment;
+import org.mahdi.setupwizard.R;
+import org.mahdi.setupwizard.ui.LocalePicker;
+import org.mahdi.setupwizard.ui.SetupPageFragment;
 
 import java.util.Locale;
 

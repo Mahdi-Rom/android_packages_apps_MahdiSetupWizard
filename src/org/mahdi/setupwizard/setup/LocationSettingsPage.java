@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.setup;
+package org.mahdi.setupwizard.setup;
 
 import android.app.Fragment;
 import android.content.ContentQueryMap;
@@ -29,8 +29,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Switch;
 
-import org.namelessrom.setupwizard.R;
-import org.namelessrom.setupwizard.ui.SetupPageFragment;
+import org.mahdi.setupwizard.R;
+import org.mahdi.setupwizard.ui.SetupPageFragment;
 
 import java.util.Observable;
 import java.util.Observer;

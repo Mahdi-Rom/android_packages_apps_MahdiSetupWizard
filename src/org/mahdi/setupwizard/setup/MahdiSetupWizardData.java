@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package org.namelessrom.setupwizard.setup;
+package org.mahdi.setupwizard.setup;
 
 import android.content.Context;
 
-import org.namelessrom.setupwizard.R;
+import org.mahdi.setupwizard.R;
 
-public class NamelessSetupWizardData extends AbstractSetupData {
+public class MahdiSetupWizardData extends AbstractSetupData {
 
-    public NamelessSetupWizardData(Context context) {
+    public MahdiSetupWizardData(Context context) {
         super(context);
     }
 
