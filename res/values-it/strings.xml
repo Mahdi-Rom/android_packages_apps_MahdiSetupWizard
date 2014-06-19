@@ -36,7 +36,7 @@
     <string name="setup_complete">Il setup è completo</string>
     <string name="setup_complete_summary">Congratulazioni! Hai finito di impostare il tuo dispositivo.</string>
     <string name="setup_welcome">Benvenuto nella Mahdi ROM</string>
-    <string name="setup_welcome_summary">Per cominciare ad mpostare il tuo dispositivo, seleziona data e ora.</string>
+    <string name="setup_welcome_summary">Per cominciare ad impostare il tuo dispositivo, seleziona data e ora.</string>
     <string name="setup_sim_missing">Inserisci SIM</string>
     <string name="setup_google_account">Account Google</string>
     <string name="setup_location">Impostazioni posizione</string>
@@ -52,8 +52,8 @@
     <string name="sim_missing_summary">Devi fare riferimento alle istruzioni della SIM.</string>
     <string name="google_account_summary">Vuoi impostare un account Google?</string>
 
-    <string name="btn_additional_wizards">Lancia Wizard Addizionali (consigliato)</string>
-    <string name="btn_additional_wizards_relaunch">Lancia di nuovo Wizard Addizionali</string>
+    <string name="btn_additional_wizards">Lancia wizard addizionali (consigliato)</string>
+    <string name="btn_additional_wizards_relaunch">Lancia di nuovo wizard addizionali</string>
     <string name="btn_google_account">Imposta account Google</string>
 
     <string name="location_access_title">Accesso alla mia posizione</string>
