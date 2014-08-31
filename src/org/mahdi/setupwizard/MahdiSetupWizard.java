@@ -35,6 +35,15 @@ public class MahdiSetupWizard extends Application {
     public static final String GCM_PREFERENCES = "org.mahdi.setupwizard.gcm";
     public static final String SETTINGS_PREFERENCES = "org.mahdi.setupwizard_preferences";
 
+    public static final String ACTION_SETUP_WIFI = "com.android.net.wifi.SETUP_WIFI_NETWORK";
+    public static final int REQUEST_CODE_SETUP_WIFI = 0;
+
+    public static final String EXTRA_SHOW_SKIP = "extra_prefs_show_button_bar";
+    public static final String EXTRA_AUTO_FINISH = "wifi_auto_finish_on_connect";
+    public static final String EXTRA_SHOW_BUTTON_BAR = "extra_prefs_show_button_bar";
+    public static final String EXTRA_PREF_BACK_TEXT = "extra_prefs_set_back_text";
+    public static final String EXTRA_ONLY_ACCESS_POINTS = "only_access_points";
+
     private StatusBarManager mStatusBarManager;
 
     @Override
