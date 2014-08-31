@@ -55,18 +55,6 @@ public class FinishPage extends Page {
 
         @Override
         protected void setUpPage() {
-            final Button launchAdditionalWizards
-                    = (Button) mRootView.findViewById(R.id.additional_wizards_button);
-            if (sAdditionalWizardsLaunched) {
-                launchAdditionalWizards.setText(R.string.btn_additional_wizards_relaunch);
-            }
-            launchAdditionalWizards.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    ((SetupWizardActivity) getActivity()).launchAdditionalWizards();
-                    sAdditionalWizardsLaunched = true;
-                }
-            });
         }
 
         @Override
