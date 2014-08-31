@@ -17,9 +17,7 @@
 
 package org.mahdi.setupwizard.ui;
 
-import android.accounts.AccountManager;
-import android.accounts.AccountManagerCallback;
-import android.accounts.AccountManagerFuture;
+import android.accounts.*;
 import android.app.Activity;
 import android.app.AppGlobals;
 import android.app.Fragment;
@@ -52,6 +50,7 @@ import org.mahdi.setupwizard.setup.SetupDataCallbacks;
 import org.mahdi.setupwizard.util.EnableAccessibilityController;
 import org.mahdi.setupwizard.util.MahdiAccountUtils;
 
+import java.io.IOException;
 import java.util.List;
 
 public class SetupWizardActivity extends Activity implements SetupDataCallbacks {
@@ -75,6 +74,7 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
     private final Handler mHandler = new Handler();
 
     private SharedPreferences mSharedPreferences;
+    private boolean mGoogleAccountSetupComplete = false;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -249,7 +249,9 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
                 } else {
                     switch (page.getId()) {
                         case R.string.setup_google_account:
-                            removeSetupPage(page, false);
+                            if (mGoogleAccountSetupComplete) {
+                                removeSetupPage(page, false);
+                            }
                             break;
                     }
                 }
@@ -309,9 +311,17 @@ public class SetupWizardActivity extends Activity implements SetupDataCallbacks 
             @Override
             public void run(AccountManagerFuture<Bundle> bundleAccountManagerFuture) {
                 if (isDestroyed()) return; //There is a change this activity has been torn down.
-                Page page = mPageList.findPage(R.string.setup_google_account);
-                if (page != null) {
-                    onPageFinished(page);
+                String token = null;
+                try {
+                    token = bundleAccountManagerFuture.getResult().getString(AccountManager.KEY_AUTHTOKEN);
+                    mGoogleAccountSetupComplete = true;
+                    Page page = mPageList.findPage(R.string.setup_google_account);
+                    if (page != null) {
+                        onPageFinished(page);
+                    }
+                } catch (OperationCanceledException e) {
+                } catch (IOException e) {
+                } catch (AuthenticatorException e) {
                 }
             }
         }, null);
